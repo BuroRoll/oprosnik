@@ -21,6 +21,5 @@ RUN poetry config virtualenvs.create false \
 
 # Creating folders, and files for a project:
 COPY src /code
-COPY .env /code
 
 CMD ["python", "main.py"]
