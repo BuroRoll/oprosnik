@@ -1,12 +1,14 @@
 from fastapi import FastAPI
+from services.db_service import Base
 
-from routers.v1 import auth, items
+from routers.v1 import auth, users, surveys
 
 # app = FastAPI(dependencies=[Depends(get_query_token)])
 app = FastAPI()
 
 app.include_router(auth.router)
-app.include_router(items.router)
+app.include_router(users.router)
+app.include_router(surveys.router)
 
 if __name__ == "__main__":
     import uvicorn

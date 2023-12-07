@@ -1,8 +1,8 @@
-"""initial
+"""add survey models default value
 
-Revision ID: 2df04302ca2d
-Revises: 
-Create Date: 2023-11-26 16:47:21.397416
+Revision ID: 40611b0e61c3
+Revises: f1c3892874f1
+Create Date: 2023-12-05 16:52:54.867711
 
 """
 from typing import Sequence, Union
@@ -12,8 +12,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '2df04302ca2d'
-down_revision: Union[str, None] = None
+revision: str = '40611b0e61c3'
+down_revision: Union[str, None] = 'f1c3892874f1'
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
 

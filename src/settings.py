@@ -1,9 +1,13 @@
-from pydantic.v1 import BaseSettings
+from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    DATABASE_URL: str = ''
-    SECRET_KEY: str = 'secret_key'
+    DATABASE_URL: str
+    SECRET_KEY: str
+    ALGORITHM: str
+
+    class Config:
+        env_file = "../.env"
 
 
 settings = Settings()
