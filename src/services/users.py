@@ -149,3 +149,27 @@ async def get_current_user(
     if user is None:
         raise credentials_exception
     return user
+
+
+async def change_respondent_password(
+        user: RespondentUser,
+        new_password: bytes,
+        session: Session
+):
+    user.password = new_password
+    session.add(user)
+    session.commit()
+    session.refresh(user)
+    return user
+
+
+async def change_interviewer_password(
+        user: InterviewerUser,
+        new_password: bytes,
+        session: Session
+):
+    user.password = new_password
+    session.add(user)
+    session.commit()
+    session.refresh(user)
+    return user

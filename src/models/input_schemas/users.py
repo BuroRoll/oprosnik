@@ -41,3 +41,8 @@ class CreateRespondentEducationInfo(BaseModel):
     education_status: EducationStatuses
     work_status: WorkStatuses
     language: Languages
+
+
+class ChangePasswordSchema(BaseModel):
+    old_password: str = Field(alias='old_password')
+    new_password: str = Field(alias='new_password')
