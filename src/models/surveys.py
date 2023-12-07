@@ -4,7 +4,7 @@ import enum
 from sqlalchemy import Column, Integer, Text, Date, ForeignKey, Enum, PrimaryKeyConstraint
 from sqlalchemy.orm import relationship, backref
 
-from src.services.db_service import Base
+from services.db_service import Base
 
 
 class SurveyStatus(enum.Enum):

@@ -9,7 +9,7 @@ from sqlalchemy import Column, Integer, String, LargeBinary, UniqueConstraint, P
 from sqlalchemy.orm import relationship, Mapped, mapped_column, backref
 from .surveys import Survey
 
-from src.services.db_service import Base
+from services.db_service import Base
 
 
 class FamilyStatus(enum.Enum):
