@@ -56,7 +56,7 @@ jobs:
             if [ ! -d $REPO_NAME ]; then
               mkdir -p $REPO_NAME
               cd $REPO_NAME
-              cat > .env
+              echo 'SECRET=' > .env
             else
               cd $REPO_NAME
             fi
